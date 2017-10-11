@@ -1,5 +1,11 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+      body {
+        background: <%= color %>;
+      }
+    </style>
+  </head>
   <body>
     <p>
       The secret number is <%= guess == number ? number : "" %>
@@ -9,5 +15,6 @@
       <input type='submit' value='Guess!' />
     </form>
     <p><%= message %></p>
+    <p><%= test %></p>
   </body>
 </html>
