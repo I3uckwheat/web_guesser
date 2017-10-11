@@ -2,11 +2,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 number = rand(100)
-@@test = "test"
 get '/' do
   guess = params['guess'].to_i
   message, color = check_guess(guess, number)
-  erb :index, locals: { number: number, message: message, guess: guess, color: color, test: test }
+  erb :index, locals: { number: number, message: message, guess: guess, color: color }
 end
 
 def check_guess(guess, number)
