@@ -16,7 +16,7 @@ end
 
 def select_number
   return @@secret_number if params['guess'] == @@secret_number ||
-                            params['cheat'] == true ||
+                            params['cheat'] == 'true' ||
                             @@guesses_left.zero?
 end
 
